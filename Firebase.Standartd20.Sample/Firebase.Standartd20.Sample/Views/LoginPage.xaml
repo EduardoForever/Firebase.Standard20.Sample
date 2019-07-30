@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Firebase.Standartd20.Sample.Views.LoginPage">
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout>
+                <Label Text="Welcome to Firebase sample!"
+                       FontSize="22"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" />
+
+                <Label Text="Please, login to account"
+                       FontSize="14"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" />
+
+                <StackLayout Margin="12">
+                    <Label Text="Login"
+                           FontSize="12" />
+                    <Entry Text="{Binding Email}" />
+
+                    <Label Text="Please, login to account"
+                           FontSize="14"
+                           Margin="0, 12"/>
+                    <Entry Text="{Binding Password}" />
+                    <Button
+                        Margin="0, 12"
+                        Text="Login"
+                        Command="{Binding LoginCommand}" />
+                    <Button
+                        Margin="0, 12"
+                        Text="Speach text*"
+                        Command="{Binding SpeachCommand}" />
+                </StackLayout>
+            </StackLayout>
+            
+            <Grid VerticalOptions="FillAndExpand"
+                  HorizontalOptions="FillAndExpand"
+                  BackgroundColor="LightBlue"
+                  Opacity="0.2"
+                  IsVisible="{Binding IsBusy}">
+                <ActivityIndicator
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    IsVisible="{Binding IsBusy}"
+                    IsRunning="{Binding IsBusy}" />
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

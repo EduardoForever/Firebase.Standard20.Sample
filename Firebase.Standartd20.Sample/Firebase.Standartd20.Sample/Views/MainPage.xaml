@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Firebase.Standartd20.Sample.Views.MainPage"
+             Title="Places">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Add" Order="Primary" Text="Add" Priority="0" Command="{Binding AddPlaceCommand}" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Grid>
+            <ListView ItemsSource="{Binding Places}"
+                      HasUnevenRows="True"
+                     ItemTapped="ListView_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell Height="150">
+                            <Grid Margin="0,0,0,5" HeightRequest="150">
+                                <Image Source="{Binding PlaceImage}"
+                                        HeightRequest="120"
+                                        Aspect="AspectFill"
+                                        HorizontalOptions="FillAndExpand"/>
+
+                                <Grid VerticalOptions="End"
+                                        HeightRequest="40"
+                                        BackgroundColor="Black"
+                                        Opacity="0.2">
+                                </Grid>
+                                <Label Text="{Binding PlaceName}"
+                                        VerticalOptions="End"
+                                        HorizontalOptions="Start"
+                                        Margin="12,0,0,6"
+                                        TextColor="White"
+                                        Style="{StaticResource DescriptionStyle}"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

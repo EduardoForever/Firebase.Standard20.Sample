@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Firebase.Standartd20.Sample.Views.PlaceDetailsPage"
+             Title="Details">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Remove" Order="Primary" Text="Remove" Priority="0" Command="{Binding RemovePlaceCommand}" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout>
+                <Grid Margin="0,0,0,5">
+                    <Image Source="{Binding Place.PlaceImage}"
+                                               HeightRequest="120"
+                                               Aspect="AspectFill"
+                                               WidthRequest="150"/>
+
+                    <Grid VerticalOptions="End"
+                                              HeightRequest="40"
+                                              BackgroundColor="Black"
+                                              Opacity="0.2">
+                    </Grid>
+                    <Label Text="{Binding Place.PlaceName}"
+                                                VerticalOptions="End"
+                                                HorizontalOptions="Start"
+                                                Margin="12,0,0,6"
+                                                TextColor="White"
+                                                Style="{StaticResource DescriptionStyle}"/>
+                </Grid>
+
+                <Label Text="{Binding Place.Description}" Margin="12,12" />
+            </StackLayout>
+
+            <Grid VerticalOptions="FillAndExpand"
+                  HorizontalOptions="FillAndExpand"
+                  BackgroundColor="LightBlue"
+                  Opacity="0.2"
+                  IsVisible="{Binding IsBusy}">
+                <ActivityIndicator
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    IsVisible="{Binding IsBusy}"
+                    IsRunning="{Binding IsBusy}" />
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
