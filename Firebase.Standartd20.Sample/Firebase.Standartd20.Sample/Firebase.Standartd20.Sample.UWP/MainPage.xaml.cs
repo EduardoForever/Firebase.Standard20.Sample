@@ -21,7 +21,7 @@ namespace Firebase.Standartd20.Sample.UWP
         {
             this.InitializeComponent();
 
-            LoadApplication(new Firebase.Standartd20.Sample.App());
+            LoadApplication(new Firebase.Standartd20.Sample.App(new UWPModule()));
         }
     }
 }

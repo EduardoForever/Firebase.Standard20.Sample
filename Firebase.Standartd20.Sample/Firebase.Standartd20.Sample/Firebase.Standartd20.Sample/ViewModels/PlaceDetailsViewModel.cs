@@ -10,7 +10,7 @@ namespace Firebase.Standartd20.Sample.ViewModels
 {
     public class PlaceDetailsViewModel : BaseViewModel
     {
-        private readonly IDataStore<Place> placesSerive;
+        private readonly PlacesService placesSerive;
 
         readonly NavigationService navigationService;
         readonly MessageService messageService;
@@ -26,7 +26,7 @@ namespace Firebase.Standartd20.Sample.ViewModels
         public RelayCommand RemovePlaceCommand { get; set; }
 
         public PlaceDetailsViewModel(
-            IDataStore<Place> placesSerive,
+            PlacesService placesSerive,
             NavigationService navigationService,
             MessageService messageService)
         {

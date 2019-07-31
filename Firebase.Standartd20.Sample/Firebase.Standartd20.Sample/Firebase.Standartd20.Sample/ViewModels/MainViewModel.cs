@@ -15,12 +15,12 @@ namespace Firebase.Standartd20.Sample.ViewModels
     {
         readonly NavigationService navigationService;
         private readonly MessageService messageService;
-        private IDataStore<Place> placesSerive;
+        private PlacesService placesSerive;
 
         private List<Place> places;
 
         public MainViewModel(
-            IDataStore<Place> placesSerive,
+            PlacesService placesSerive,
             NavigationService navigationService,
             MessageService messageService)
         {

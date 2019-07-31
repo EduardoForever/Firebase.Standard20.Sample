@@ -1,5 +1,6 @@
 ﻿using Firebase.Standartd20.Sample.Models;
 using Firebase.Standartd20.Sample.Services;
+using Firebase.Standartd20.Sample.Services.Base;
 using Firebase.Standartd20.Sample.Services.Implementation;
 using GalaSoft.MvvmLight.Command;
 using System;
@@ -10,7 +11,7 @@ namespace Firebase.Standartd20.Sample.ViewModels
 {
     public class AddPlaceViewModel : BaseViewModel
     {
-        private readonly IDataStore<Place> placesSerive;
+        private readonly PlacesService placesSerive;
 
         readonly NavigationService navigationService;
         readonly MessageService messageService;
@@ -40,7 +41,7 @@ namespace Firebase.Standartd20.Sample.ViewModels
         public RelayCommand AddPlaceCommand { get; set; }
 
         public AddPlaceViewModel(
-            IDataStore<Place> placesSerive, 
+            PlacesService placesSerive, 
             NavigationService navigationService,
             MessageService messageService)
         {
