@@ -15,7 +15,7 @@ namespace Firebase.Standartd20.Sample.Services.Base
 
         public FirebaseService(IFirebaseAuthService firebaseAuthService, string collectionName)
         {
-            FirestoreDb db = FirestoreDb.Create(ApiKeys.FirebaseProjectId);
+            FirestoreDb db = FirestoreDb.Create(ApiKeys.FirebaseProjectId, firebaseAuthService.Client);
 
             collection = db.Collection(collectionName);
             this.firebaseAuthService = firebaseAuthService;

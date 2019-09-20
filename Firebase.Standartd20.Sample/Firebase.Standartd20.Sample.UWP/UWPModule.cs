@@ -9,9 +9,5 @@ namespace Firebase.Standartd20.Sample.UWP
 {
     public class UWPModule : Module
     {
-        protected override void Load(ContainerBuilder builder)
-        {
-            //builder.RegisterType<FirebaseAppNameResolver>().As<IFirebaseAppNameResolver>().SingleInstance();
-        }
     }
 }

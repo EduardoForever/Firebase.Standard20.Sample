@@ -22,7 +22,8 @@ namespace Firebase.Standartd20.Sample.Config
             }
         }
 
-        public const string FirebaseApiKey = "AIzaSyASsPCCqrcMSlQcKEN1eHnQiwutIB5OiA4";
+        public const string FirebaseApiKey = "AIzaSyBcBd6S2QVcBYk3L0wvN0ZSBaQ3j-IbOp8";
+        //public const string FirebaseApiKey = "AIzaSyASsPCCqrcMSlQcKEN1eHnQiwutIB5OiA4";
         public const string FirebaseUrl = "https://fir-sample-c6cc7.firebaseio.com/";
         public const string FirebasePath = "places";
         public const string FirebaseProjectId = "fir-sample-c6cc7";

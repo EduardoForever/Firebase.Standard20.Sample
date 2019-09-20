@@ -53,7 +53,7 @@ namespace Firebase.Standartd20.Sample
                 var firebaseAuthService = componentContext.Resolve<IFirebaseAuthService>();
 
                 return new PlacesService(firebaseAuthService, ApiKeys.FirebasePath);
-            }).As<IDataStore<Place>>();
+            }).As<PlacesService>();
 
             builder.RegisterModule(module);
 
